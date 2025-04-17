@@ -10,8 +10,6 @@ import com.example.demo.product.model.Product;
 import com.example.demo.product.model.ProductDTO;
 import com.mysql.cj.util.StringUtils;
 
-import ch.qos.logback.core.util.StringUtil;
-
 @Service
 public class createProductService implements Command<Product, ProductDTO> {
 
