@@ -12,6 +12,11 @@ public class GlobalExceptionHandler {
     
     @ExceptionHandler(ProductNotFoundException.class)
     public ResponseEntity<ErrorResponse> handleProductNotFoundException(ProductNotFoundException exception){
-        return ResponseEntity.status(HttpStatus.OK).body(new ErrorResponse(exception.getMessage(), exception.getCause()));
+        return ResponseEntity.status(HttpStatus.OK).body(new ErrorResponse(exception.getMessage()));
+    }
+
+    @ExceptionHandler(ProductNotValidException.class)
+    public ResponseEntity<ErrorResponse> handleProductNotValidException(ProductNotValidException exception){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ErrorResponse(exception.getMessage()));
     }
 }

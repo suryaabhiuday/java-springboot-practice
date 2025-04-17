@@ -5,10 +5,8 @@ import lombok.Getter;
 @Getter
 public class ErrorResponse {
     private String message;
-    private Throwable cause;
 
-    public ErrorResponse(String message, Throwable cause){
+    public ErrorResponse(String message){
         this.message = message;
-        this.cause = cause;
     }
 }
